@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "my-s3-bucket-tf-state-2024-07" # Replace with your actual S3 bucket name
+    bucket = "my-new-bucket-terraform-2024-07" # Replace with your actual S3 bucket name
     key    = "Jenkins/terraform.tfstate"
     region = "us-east-1"
   }
