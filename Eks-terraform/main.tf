@@ -33,6 +33,7 @@ data "aws_subnets" "public" {
   }data "aws_availability_zones" "available" {
   state = "available"
 }
+}
 data "aws_availability_zones" "example" {
   all_availability_zones = true
 
@@ -40,8 +41,6 @@ data "aws_availability_zones" "example" {
     name   = "opt-in-status"
     values = ["not-opted-in", "opted-in"]
   }
-}
-
 
 }
 #cluster provision
