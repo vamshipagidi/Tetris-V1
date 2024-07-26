@@ -33,10 +33,7 @@ data "aws_subnets" "public" {
   }
 }
 data "aws_availability_zones" "example" {
-  state {
-    name   = "available"
-    values = ["us-east-1e"]
-  }
+  state = "available"
 }
 #cluster provision
 resource "aws_eks_cluster" "example" {
