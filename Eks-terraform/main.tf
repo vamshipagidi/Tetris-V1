@@ -30,9 +30,7 @@ data "aws_subnets" "public" {
   filter {
     name   = "vpc-id"
     values = [data.aws_vpc.default.id]
-  }data "aws_availability_zones" "available" {
-  state = "available"
-}
+  }
 }
 data "aws_availability_zones" "example" {
   state {
