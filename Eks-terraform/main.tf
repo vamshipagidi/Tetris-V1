@@ -30,7 +30,18 @@ data "aws_subnets" "public" {
   filter {
     name   = "vpc-id"
     values = [data.aws_vpc.default.id]
+  }data "aws_availability_zones" "available" {
+  state = "available"
+}
+data "aws_availability_zones" "example" {
+  all_availability_zones = true
+
+  filter {
+    name   = "opt-in-status"
+    values = ["not-opted-in", "opted-in"]
   }
+}
+
 
 }
 #cluster provision
